@@ -6,8 +6,26 @@
         {
             "label": "build",
             "type": "shell",
+            //"command": "g++",
             "command": "make",
-            "args": []
+            "args": [],
+            //"args": [
+            //    "-g",
+            //    "main.cpp",
+            //    "-o",
+            //    "Programa.exe"
+            //],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "dependsOn": "build",
+            //"command": ".\\Programa.exe"
+            "command": ".\\bin\\Programa.exe"
         }
     ]
 }
